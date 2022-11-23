@@ -1,0 +1,23 @@
+.banners {
+    background: aliceblue;
+    padding:50px 0;
+}
+
+.banners__container {
+    width: 90%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:20px;
+}
+
+.banners__image {
+    object-fit: contain;
+	width:100%;
+}
+
+@media (min-width:1024px) {
+    .banners__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
