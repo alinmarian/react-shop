@@ -14,8 +14,7 @@ function MainNavbar() {
         <ul className={mobile ? "main-navbar__mobile" : "main-navbar__desktop"}>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/">Services</Link>
-            <Link to="/">Skills</Link>
+            <Link to="/products">Products</Link>
             <Link to="/">Contact</Link>
         </ul>
         <button className='main-navbar__icon' onClick={() => setMobile(!mobile)}>

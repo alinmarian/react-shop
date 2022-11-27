@@ -1,5 +1,6 @@
 import "./GetProducts.css"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
 
 function GetProducts() {
     // http://localhost:4000/products?_sort=id&_order=desc&_limit=16
@@ -7,6 +8,7 @@ function GetProducts() {
     // http://localhost:4000/products?category=men%27s%20clothing&_sort=id&_order=desc
     const productsPath = "http://localhost:4000/products?_sort=id&_order=desc&_limit=16";
     const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -18,6 +20,10 @@ function GetProducts() {
 
     }, [])
 
+    function LoadDetails(id) {
+        navigate(`/product/${id}`)
+    }
+
   return (
     <div className="home-products">
         <div className="home-products__container">
@@ -26,12 +32,11 @@ function GetProducts() {
         {
         products.map(product => (
             
-                <div className="home-products__card">
+                <div className="home-products__card" key={product.id}>
                 <img className="home-products__image" src={product.image} alt="" />
                 <h3 className="home-products__title">{product.title}</h3>
                 <h3 className="home-products__price">${product.price}</h3>
-                <button className="home-products__button" value={product.id}>View Product</button>
-                <span key={product.id}></span>
+                <button className="home-products__button" value={product.id} onClick={() => {LoadDetails(product.id)}}>View Product</button>
                 </div>
             
         ))
