@@ -1,0 +1,43 @@
+.contact-info {
+    padding:50px 0;
+}
+
+.contact-info__container {
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:25px;
+}
+
+.address__icon,
+.phone__icon,
+.email__icon {
+    font-size:50px;
+    color:blueviolet;
+}
+
+.address,
+.phone,
+.email {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding:20%;
+}
+
+.address__title,
+.phone__title,
+.email__title {
+    margin:15px 0;
+}
+
+@media (min-width:1024px) {
+    .contact-info__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-info__container {
+        width:60%;
+    }
+}

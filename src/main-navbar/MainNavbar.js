@@ -15,7 +15,7 @@ function MainNavbar() {
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/products">Products</Link>
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
         </ul>
         <button className='main-navbar__icon' onClick={() => setMobile(!mobile)}>
             {mobile ? <ImCross/> : <FaBars />}

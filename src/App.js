@@ -4,6 +4,8 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import ProductDetails from './pages/products/ProductDetails';
 import Products from './pages/products/Products';
+import Contact from './pages/contact/Contact';
+import AdminDashboard from './pages/admin/Dashboard/AdminDashboard';
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/product/:id" element={<ProductDetails/>}></Route>
         <Route path="/products" element={<Products/>}></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="/dashboard" element={<AdminDashboard/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>
