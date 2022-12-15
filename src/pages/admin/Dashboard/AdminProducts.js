@@ -16,13 +16,26 @@ function AdminProducts() {
       });
   }, []);
 
-  // const LoadDetails = (id) => {
-  //     navigate("/employee/detail/" + id);
-  // }
+  const EditProducts = (productId) => {
+      navigate(`/product/edit/${productId}`);
+  }
+
+  const RemoveProducts = (productId) => {
+    if (window.confirm('Do you want to delete this product?')) {
+        fetch("http://localhost:4000/products/" + productId, {
+            method: "DELETE"
+        }).then((response) => {
+            alert('Removed successfully.')
+            window.location.reload();
+        }).catch((err) => {
+            console.log(err.message)
+        })
+    }
+}
 
   return (
     <div className="admin__products">
-        <Link className="btn btn--add">Add Product (+)</Link>
+        <Link to="/product/create" className="btn btn--add">Add Product (+)</Link>
         <table>
           <thead>
             <tr>
@@ -46,9 +59,8 @@ function AdminProducts() {
               <td>${product.price}</td>
               <td>{product.category}</td>
               <td>
-                <Link className="btn btn--edit">Edit</Link>
-                <Link className="btn btn--delete">Delete</Link>
-                <Link className="btn btn--view">View</Link>
+                <a className="btn btn--edit" onClick={() => { EditProducts(product.id) }}>Edit</a>
+                <a className="btn btn--delete" onClick={() => { RemoveProducts(product.id) }}>Delete</a>
               </td>
             </tr>
           </tbody>
