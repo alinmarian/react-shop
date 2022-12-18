@@ -7,7 +7,8 @@
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       "category": "men's clothing",
       "largeDescription": "Maiorum qualisque no est, at usu putant labitur torquatos, est stet consul suscipit ad. Ea tation appareat pro, primis nemore aeterno vim ut. Et vel fuisset noluisse, sed suas vidisse accusam ex, vidisse accusam conclusionemque ad has. His modo etiam no, te eos nibh mazim, quo lorem labore ea. Sed ad veniam graeci omnesque, nam intellegat reprehendunt ad. Te habeo clita ancillae sit, ei vix dico aperiri consequat. Sit no tota illud contentiones. Tale justo perpetua quo ut, vix enim expetenda neglegentur at. In pertinax incorrupte eos, eripuit nominavi in pri. Omnes laoreet tibique eos ex, assum constituam mea ei. Maiorum qualisque no est, at usu putant labitur torquatos, est stet consul suscipit ad. Ea tation appareat pro, primis nemore aeterno vim ut. Et vel fuisset noluisse, sed suas vidisse accusam ex, vidisse accusam conclusionemque ad has. His modo etiam no, te eos nibh mazim, quo lorem labore ea. Sed ad veniam graeci omnesque, nam intellegat reprehendunt ad. Te habeo clita ancillae sit, ei vix dico aperiri consequat. Sit no tota illud contentiones. Tale justo perpetua quo ut, vix enim expetenda neglegentur at. In pertinax incorrupte eos, eripuit nominavi in pri. Omnes laoreet tibique eos ex, assum constituam mea ei.",
-      "id": 1
+      "id": 1,
+      "quantity": 1
     },
     {
       "title": "Mens Casual Premium Slim Fit T-Shirts ",
@@ -16,7 +17,8 @@
       "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
       "category": "men's clothing",
       "largeDescription": "Maiorum qualisque no est, at usu putant labitur torquatos, est stet consul suscipit ad. Ea tation appareat pro, primis nemore aeterno vim ut. Et vel fuisset noluisse, sed suas vidisse accusam ex, vidisse accusam conclusionemque ad has. His modo etiam no, te eos nibh mazim, quo lorem labore ea. Sed ad veniam graeci omnesque, nam intellegat reprehendunt ad. Te habeo clita ancillae sit, ei vix dico aperiri consequat. Sit no tota illud contentiones. Tale justo perpetua quo ut, vix enim expetenda neglegentur at. In pertinax incorrupte eos, eripuit nominavi in pri. Omnes laoreet tibique eos ex, assum constituam mea ei. Maiorum qualisque no est, at usu putant labitur torquatos, est stet consul suscipit ad. Ea tation appareat pro, primis nemore aeterno vim ut. Et vel fuisset noluisse, sed suas vidisse accusam ex, vidisse accusam conclusionemque ad has. His modo etiam no, te eos nibh mazim, quo lorem labore ea. Sed ad veniam graeci omnesque, nam intellegat reprehendunt ad. Te habeo clita ancillae sit, ei vix dico aperiri consequat. Sit no tota illud contentiones. Tale justo perpetua quo ut, vix enim expetenda neglegentur at. In pertinax incorrupte eos, eripuit nominavi in pri. Omnes laoreet tibique eos ex, assum constituam mea ei.",
-      "id": 2
+      "id": 2,
+      "quantity": 1
     },
     {
       "id": 3,
@@ -29,7 +31,8 @@
       "rating": {
         "rate": 4.7,
         "count": 500
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 4,
@@ -42,7 +45,8 @@
       "rating": {
         "rate": 2.1,
         "count": 430
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 5,
@@ -55,7 +59,8 @@
       "rating": {
         "rate": 4.6,
         "count": 400
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 6,
@@ -68,7 +73,8 @@
       "rating": {
         "rate": 3.9,
         "count": 70
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 7,
@@ -81,7 +87,8 @@
       "rating": {
         "rate": 3,
         "count": 400
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 8,
@@ -94,7 +101,8 @@
       "rating": {
         "rate": 1.9,
         "count": 100
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 9,
@@ -107,7 +115,8 @@
       "rating": {
         "rate": 3.3,
         "count": 203
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 10,
@@ -120,7 +129,8 @@
       "rating": {
         "rate": 2.9,
         "count": 470
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 11,
@@ -133,7 +143,8 @@
       "rating": {
         "rate": 4.8,
         "count": 319
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 12,
@@ -146,7 +157,8 @@
       "rating": {
         "rate": 4.8,
         "count": 400
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 13,
@@ -159,7 +171,8 @@
       "rating": {
         "rate": 2.9,
         "count": 250
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 14,
@@ -172,7 +185,8 @@
       "rating": {
         "rate": 2.2,
         "count": 140
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 15,
@@ -185,7 +199,8 @@
       "rating": {
         "rate": 2.6,
         "count": 235
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 16,
@@ -198,7 +213,8 @@
       "rating": {
         "rate": 2.9,
         "count": 340
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 17,
@@ -211,7 +227,8 @@
       "rating": {
         "rate": 3.8,
         "count": 679
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 18,
@@ -224,7 +241,8 @@
       "rating": {
         "rate": 4.7,
         "count": 130
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 19,
@@ -237,7 +255,8 @@
       "rating": {
         "rate": 4.5,
         "count": 146
-      }
+      },
+      "quantity": 1
     },
     {
       "id": 20,
@@ -250,7 +269,40 @@
       "rating": {
         "rate": 3.6,
         "count": 145
-      }
+      },
+      "quantity": 1
+    }
+  ],
+  "cart": [
+    {
+      "productId": 3,
+      "quantity": 3,
+      "id": 2
+    },
+    {
+      "productId": 18,
+      "quantity": 2,
+      "id": 3
+    },
+    {
+      "productId": 19,
+      "quantity": 3,
+      "id": 4
+    },
+    {
+      "productId": 12,
+      "quantity": 1,
+      "id": 5
+    },
+    {
+      "productId": 1,
+      "quantity": 1,
+      "id": 6
+    },
+    {
+      "productId": 7,
+      "quantity": 1,
+      "id": 7
     }
   ]
 }

@@ -17,6 +17,30 @@ function ProductDetails() {
             })
     }, [])
 
+    function AddToCart(id) {
+
+        fetch(`http://localhost:4000/cart?productId=${id}`)
+          
+          .then(response => response.json())
+          .then((cartProducts => {
+            const [cartProduct] = cartProducts
+            if(cartProduct) {
+              fetch(`http://localhost:4000/cart/${cartProduct.id}`, {
+                method: "PATCH",
+                body: JSON.stringify( { quantity: cartProduct.quantity + 1 } ),
+                headers: {"Content-Type":"application/json"}
+              })
+            } else {
+              fetch("http://localhost:4000/cart", {
+                method: "POST",
+                body: JSON.stringify( {productId: id, quantity: 1} ),
+                headers: {"Content-Type": "application/json"}
+              })
+            }
+          }))
+  
+      }
+
   return (
     <div>
         <MainNavbar />
@@ -30,7 +54,7 @@ function ProductDetails() {
                     <h1 className="product__title">{product.title}</h1>
                     <h2 className="product__price">${product.price}</h2>
                     <p className="product__description">{product.description}</p>
-                    <button className="product__rating home-products__button" value={product.id}>Add to cart</button>
+                    <button className="product__rating home-products__button" value={product.id} onClick={() => {AddToCart(product.id)}}>Add to cart</button>
                 </div>
             </div>
         </div>

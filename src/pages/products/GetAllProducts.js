@@ -89,6 +89,30 @@ function GetAllProducts() {
         navigate(`/product/${id}`)
     }
 
+    function AddToCart(id) {
+
+      fetch(`http://localhost:4000/cart?productId=${id}`)
+        
+        .then(response => response.json())
+        .then((cartProducts => {
+          const [cartProduct] = cartProducts
+          if(cartProduct) {
+            fetch(`http://localhost:4000/cart/${cartProduct.id}`, {
+              method: "PATCH",
+              body: JSON.stringify( { quantity: cartProduct.quantity + 1 } ),
+              headers: {"Content-Type":"application/json"}
+            })
+          } else {
+            fetch("http://localhost:4000/cart", {
+              method: "POST",
+              body: JSON.stringify( {productId: id, quantity: 1} ),
+              headers: {"Content-Type": "application/json"}
+            })
+          }
+        }))
+
+    }
+
   return (
     <div className='products'>
         <div className="products__container">
@@ -108,7 +132,8 @@ function GetAllProducts() {
                             <img className="all-products__image" src={product.image} alt="" />
                             <h3 className="all-products__title">{product.title}</h3>
                             <h3 className="all-products__price">${product.price}</h3>
-                            <button className="home-products__button" value={product.id} onClick={() => {LoadDetails(product.id)}}>View Product</button>
+                            <button className="home-products__button details-btn" value={product.id} onClick={() => {LoadDetails(product.id)}}>View Product</button>
+                            <button className="home-products__button" value={product.id} onClick={() => {AddToCart(product.id)}}>Add To Cart</button>
                         </div>
                         ))
                     }

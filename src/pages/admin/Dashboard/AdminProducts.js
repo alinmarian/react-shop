@@ -31,7 +31,7 @@ function AdminProducts() {
             console.log(err.message)
         })
     }
-}
+  }
 
   return (
     <div className="admin__products">
