@@ -16,6 +16,8 @@ function MainNavbar() {
             <Link to="/about">About</Link>
             <Link to="/products">Products</Link>
             <Link to="/contact">Contact</Link>
+            <Link to="/cart">Cart</Link>
+            <Link to="/register" className='register-btn'>Register</Link>
         </ul>
         <button className='main-navbar__icon' onClick={() => setMobile(!mobile)}>
             {mobile ? <ImCross/> : <FaBars />}

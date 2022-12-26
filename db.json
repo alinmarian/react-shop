@@ -304,5 +304,18 @@
       "quantity": 1,
       "id": 7
     }
+  ],
+  "users": [
+    {
+      "email": "alin@test.com",
+      "password": "$2a$10$TnTTXzTnPgCBl95g0YXXLOFa.n62AiASWheR23/yNzps4n.eQjElq",
+      "name": "Alin",
+      "birthday": "2014-12-30",
+      "gender": "Man",
+      "phone": "07853698542",
+      "address": "Str. Lorem Ipsum, nr 10",
+      "city": "Craiova",
+      "id": 1
+    }
   ]
 }

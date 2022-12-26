@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 4000"
+    "server": "json-server-auth --watch db.json --port 4000 -r routes.json"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "json-server-auth": "^2.1.0"
   }
 }

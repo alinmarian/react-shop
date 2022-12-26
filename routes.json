@@ -1,0 +1,5 @@
+{
+    "/dashboard": "/660/products",
+    "/product/create" : "/660/products",
+    "/product/edit/:id": "/660/products/:id"
+  }

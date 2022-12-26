@@ -9,6 +9,7 @@ import AdminDashboard from './pages/admin/Dashboard/AdminDashboard';
 import CreateProduct from './pages/admin/Dashboard/CreateProduct';
 import EditProduct from './pages/admin/Dashboard/EditProduct';
 import ShoppingCart from './pages/cart/ShoppingCart';
+import Register from './pages/auth/Register';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/product/create" element={<CreateProduct/>}></Route>
         <Route path="/product/edit/:productId" element={<EditProduct/>}></Route>
         <Route path="/cart" element={<ShoppingCart/>}></Route>
+        <Route path="/register" element={<Register/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>
