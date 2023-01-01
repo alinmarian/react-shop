@@ -4,6 +4,7 @@ import AdminProducts from './AdminProducts'
 import Footer from '../../../footer/Footer'
 
 function AdminDashboard() {
+
   return (
     <div>
         <AdminMenu/>

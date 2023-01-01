@@ -313,9 +313,34 @@
       "birthday": "2014-12-30",
       "gender": "Man",
       "phone": "07853698542",
-      "address": "Str. Lorem Ipsum, nr 10",
-      "city": "Craiova",
       "id": 1
+    },
+    {
+      "email": "andrei@gmail.com",
+      "password": "$2a$10$3KS/7mG2/lNPEB3raiuUMuQ0CB9Zm203j4r/H350zMQ03Tcmzs7f.",
+      "name": "Andrei",
+      "birthday": "2022-12-16",
+      "gender": "Man",
+      "phone": "123546789",
+      "id": 2
+    },
+    {
+      "email": "marius@test.com",
+      "password": "$2a$10$tYAHLT8w9W7O0nXOrlY8TOFEM5OiRTeFUrdawgngC8vxLSLQwlOGm",
+      "name": "Marius",
+      "birthday": "2022-12-09",
+      "gender": "Man",
+      "phone": "123456789",
+      "id": 3
+    },
+    {
+      "email": "alin@gmail.com",
+      "name": "Alin",
+      "birthday": "2023-01-24",
+      "gender": "Man",
+      "phone": "123456789120212",
+      "password": "$2a$10$YpXJxNJeq1cG7JL2PkY9NOev0XzwgeNW5IWF54hAeG443O74Pp9Dm",
+      "id": 4
     }
   ]
 }

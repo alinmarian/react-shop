@@ -77,9 +77,9 @@ function Register() {
             body: JSON.stringify(body)
         })
         .then((response) => {
-            alert("Account created succesfully! Please login.")
-            navigate("/login")
-        })
+            alert("Account created succesfully! Please login.");
+            navigate("/login");
+        })  
     }
 
     function validatePassword(password) {

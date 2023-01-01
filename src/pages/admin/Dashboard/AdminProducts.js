@@ -1,10 +1,12 @@
 import "./AdminProducts.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+// import { AuthContext } from "../../../App";
 
 function AdminProducts() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+  // const { auth } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("http://localhost:4000/products")
