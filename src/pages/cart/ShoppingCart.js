@@ -45,9 +45,14 @@ function ShoppingCart() {
     }
 
     const RemoveProducts = (productId) => {
+
+        setProducts(products.filter((product) => {
+            return product.id !== productId;
+        }))
+
         for(const product of products) {
             if(product.id === productId) {
-                console.log(product);
+                console.log(productId);
             }
         }
       }

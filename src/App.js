@@ -13,19 +13,28 @@ import Register from './pages/auth/Register';
 import Login from './pages/auth/Login';
 import React from 'react';
 import UserProfile from './pages/admin/Dashboard/UserProfile';
+import { Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+
+
+function Auth(props) {
+      useEffect(() => {
+        if ("token" in localStorage) {
+          alert("Welcome to the admin panel");
+        } else {
+          alert(`You don't have permission to view this page. Please login in order to view this resource!`);
+        }
+      }, [])
+
+      if ("token" in localStorage) {
+      return <>{props.children}</>;
+    } else {
+      return <Navigate to="/login" replace={true} />;
+    }
+}
+
 
 function App() {
-
-  // const navigate = useNavigate();
-
-  // function checkToken() {
-  //   if ("token" in localStorage) {
-  //     alert("Welcome to the admin panel");
-  //   } else {
-  //     alert(`You don't have permission to view this page. Please login in order to view this resource!`);
-  //     navigate("/");
-  //   }
-  // }
 
   return (
     <div className="App">
@@ -36,13 +45,13 @@ function App() {
             <Route path="/product/:id" element={<ProductDetails/>}></Route>
             <Route path="/products" element={<Products/>}></Route>
             <Route path="/contact" element={<Contact/>}></Route>
-            <Route path="/dashboard" element={<AdminDashboard/>}></Route>
-            <Route path="/product/create" element={<CreateProduct/>}></Route>
-            <Route path="/product/edit/:productId" element={<EditProduct/>}></Route>
+            <Route path="/dashboard" element={<Auth><AdminDashboard/></Auth>}></Route>
+            <Route path="/product/create" element={<Auth><CreateProduct/></Auth>}></Route>
+            <Route path="/product/edit/:productId" element={<Auth><EditProduct/></Auth>}></Route>
             <Route path="/cart" element={<ShoppingCart/>}></Route>
             <Route path="/register" element={<Register/>}></Route>
             <Route path="/login" element={<Login/>}></Route>
-            <Route path="/profile" element={<UserProfile/>}></Route>
+            <Route path="/profile" element={<Auth><UserProfile/></Auth>}></Route>
           </Routes>
       </BrowserRouter>
     </div>

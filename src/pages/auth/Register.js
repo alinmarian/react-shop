@@ -54,22 +54,76 @@ function Register() {
         setEmailError("");
         setPasswordError("");
 
-        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
-        const emailValid = emailRegex.test(email);
+        const emailValid = validateEmail(email);
         const passwordValid = validatePassword(password);
-
-        if(!emailValid) {
-            setEmailError("Please enter a valid email!")
+    
+        if (!emailValid || !passwordValid) {
+          return;
         }
 
-        if(!passwordValid) {
-            setPasswordError("You must enter a password that is longer than 6 characters, has at least one uppercase letter, has a number and has a special character (!,@, #,$,%,^,&,*)")
-        }
-
-        if(!emailValid || !passwordValid) {
-            return;
-        }
+        function validateEmail(email) {
+            const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
+        
+            const emailValid = emailRegex.test(email);
+        
+            if (!emailValid) {
+              setEmailError('Please enter a valid email');
+            }
+        
+            return emailValid;
+          }
+        
+          function validatePassword(password) {
+            const specialCharacterList = [
+              '!', '@', '#', '$', '%', '^', '&', '*'
+            ];
+        
+            if (!(password.length >= 6)) {
+              setPasswordError('Password must contain at least 6 characters');
+        
+              return false;
+            }
+        
+            let hasUpperCaseCharacter = false;
+            let hasNumberCharacter = false;
+            let hasSpecialCharacter = false;
+        
+            for (let letter of password) {
+              if (
+                !specialCharacterList.includes(letter) 
+                && Number.isNaN(Number(letter)) 
+                && letter === letter.toUpperCase()
+              ) {
+                hasUpperCaseCharacter = true;
+              }
+        
+              if (typeof Number(letter) === 'number') {
+                hasNumberCharacter = true;
+              }
+        
+              if (specialCharacterList.includes(letter)) {
+                hasSpecialCharacter = true;
+              }
+            }
+        
+            if (!hasUpperCaseCharacter) {
+              setPasswordError('Your password must have at least one upper case character');
+            }
+        
+            if (!hasNumberCharacter) {
+              setPasswordError('Your password must include at least one number');
+            }
+        
+            if (!hasSpecialCharacter) {
+              setPasswordError('Your password must include at least one special character');
+            }
+        
+            if (hasUpperCaseCharacter && hasNumberCharacter && hasSpecialCharacter) {
+              return true;
+            }
+        
+            return false;
+          }
 
         fetch(registerUrl, {
             method:"POST",
@@ -80,40 +134,6 @@ function Register() {
             alert("Account created succesfully! Please login.");
             navigate("/login");
         })  
-    }
-
-    function validatePassword(password) {
-        const specialCharacterList = ["!", "@", "#", "$", "%", "^", "&", "*"];
-
-
-        if(password.length >= 6) {
-            return true;
-        }
-
-        let hasUpperCaseCharacter = false;
-        let hasNumberCharacter = false;
-        let hasSpecialCharacter = false;
-        let letter;
-
-        for(let letter of password) {
-            if(letter === letter.toUpperCase()) {
-                hasUpperCaseCharacter = true;
-            }
-        }
-
-        if(typeof Number(letter) === "number") {
-            hasNumberCharacter = true;
-        }
-
-        if(specialCharacterList.includes(letter)) {
-            hasSpecialCharacter = true;
-        }
-
-        if(hasUpperCaseCharacter && hasNumberCharacter && hasSpecialCharacter) {
-            return true;
-        }
-
-        return false;
     }
 
   return (

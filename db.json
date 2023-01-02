@@ -301,7 +301,7 @@
     },
     {
       "productId": 7,
-      "quantity": 1,
+      "quantity": 2,
       "id": 7
     }
   ],
@@ -335,11 +335,11 @@
     },
     {
       "email": "alin@gmail.com",
+      "password": "$2a$10$D9WP8AG6NWLN2m3q4/7AoO9sURfquCuIdPGhuF5EmGJkAdps7xcQm",
       "name": "Alin",
-      "birthday": "2023-01-24",
+      "birthday": "2023-01-25",
       "gender": "Man",
-      "phone": "123456789120212",
-      "password": "$2a$10$YpXJxNJeq1cG7JL2PkY9NOev0XzwgeNW5IWF54hAeG443O74Pp9Dm",
+      "phone": "123456789",
       "id": 4
     }
   ]

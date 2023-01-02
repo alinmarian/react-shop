@@ -7,8 +7,8 @@ function GetAllProducts() {
     const [searchTerm, setSearchTerm] = useState('');
     const [initialProducts, setInitialProducts] = useState([]);
     const [filters, setFilters] = useState({
-        men: false,
-        women: false,
+       "men's clothing": false,
+       "women's clothing": false,
         electronics: false,
         jewelery: false,
       });
@@ -28,20 +28,26 @@ function GetAllProducts() {
           const filteredProducts = initialProducts
             .filter((product) => product.title.toLowerCase().includes(searchTerm))
             .filter(product => {
-    
-              if (filters.men && filters.women && filters.electronics && filters.jewelery) {
-                return product.category === "men's clothing" || product.category === "women's clothing" || product.category === "electronics" || product.category === "jewelery";
-              } else if (filters.men) {
-                return product.category === "men's clothing";
-              } else if (filters.women) {
-                return product.category === "women's clothing";
-              } else if (filters.electronics) {
-                return product.category === "electronics";
-              } else if (filters.jewelery) {
-                return product.category === "jewelery";
+
+              if(!filters["men's clothing"] && !filters["women's clothing"] && !filters.electronics && !filters.jewelery) {
+                  return true;
               } else {
-                return true;
+                  return filters[product.category];
               }
+
+              // if (filters.men && filters.women && filters.electronics && filters.jewelery) {
+              //   return product.category === "men's clothing" || product.category === "women's clothing" || product.category === "electronics" || product.category === "jewelery";
+              // } else if (filters.men) {
+              //   return product.category === "men's clothing";
+              // } else if (filters.women) {
+              //   return product.category === "women's clothing";
+              // } else if (filters.electronics) {
+              //   return product.category === "electronics";
+              // } else if (filters.jewelery) {
+              //   return product.category === "jewelery";
+              // } else {
+              //   return true;
+              // }
             })
     
             setProducts(filteredProducts);
@@ -59,14 +65,14 @@ function GetAllProducts() {
       function filterChangedMen(event) {
         setFilters({
           ...filters,
-          men: event.target.checked
+          "men's clothing": event.target.checked
         });
       }
     
       function filterChangedWomen(event) {
         setFilters({
           ...filters,
-          women: event.target.checked
+          "women's clothing": event.target.checked
         });
       }
 
